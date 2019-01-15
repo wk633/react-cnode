@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:client": "webpack --config build/webpack.config.client.js",
     "build:server": "webpack --config build/webpack.config.server.js",
-    "build": "build:client && build:server"
+    "build": "npm run clear && npm run build:client && npm run build:server",
+    "clean": "rimraf dist"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.3",
     "webpack-cli": "^3.2.1"
   }
 }
